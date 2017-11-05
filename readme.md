@@ -6,7 +6,11 @@ There is an automatic sentence generator feature from given word using Shannon V
 
 ## Datasets
 I use the python article scraper tool in this [link](https://github.com/codelucas/newspaper).   
-I captured 9 automatic news sites then printed into a .txt file format   
+I captured 9 automatic news sites then printed into a .txt file format
+
+#### Important
+On the demo website I only use 5 corpus because free memory size hosting is very bad.   
+
 Please see the ```datasets/ ``` for the datasets
 1. datajpnn.txt
 2. datakompas.txt
@@ -64,4 +68,5 @@ $this->Tools->pre_print_r($modelTri);
 ![alt text](https://s1.postimg.org/4jq6y1jten/image.png "Shannon Visualization")  
 
 ## Live Demo
+
 <http://indolangmodel.byethost7.com/>
