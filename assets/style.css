@@ -1,0 +1,63 @@
+body{
+	font-size:18px;
+}
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 24px;
+    line-height: 20px;
+}
+#dropzone {
+  position: relative;
+  border: 10px dotted black;
+  border-radius: 20px;
+  color: grey;
+  font: bold 24px/80px arial;
+  height: 100px;
+  margin: 30px auto;
+  text-align: center;
+  width: 800px;
+}
+
+#dropzone.hover {
+  border: 10px solid yellow;
+  color: #FE5;
+}
+
+#dropzone.dropped {
+  background: #000000;
+  border: 10px solid #444;
+}
+
+#dropzone div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#dropzone img {
+  border-radius: 10px;
+  vertical-align: middle;
+  max-width: 95%;
+  max-height: 95%;
+}
+
+#dropzone [type="file"] {
+  cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+h3{
+	margin-top: 10px;
+}
+.table-condensed>tbody>tr>td{
+  padding:3px;
+}
