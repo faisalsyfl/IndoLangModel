@@ -9,7 +9,7 @@ I use the python article scraper tool in this [link](https://github.com/codeluca
 I captured 9 automatic news sites then printed into a .txt file format
 
 #### Important
-On the demo website I only use 5 corpus because free memory size hosting is very bad.   
+On the demo website I only use 4 corpus because free memory size hosting is very bad.   
 
 Please see the ```datasets/ ``` for the datasets
 1. datajpnn.txt
