@@ -1,11 +1,22 @@
 ## Description
-Indonesian Language Model
-This program trains Indonesian model using ngram technique.
-The data used are the 9 most popular news sites in Indonesia.
-There is an automatic sentence generator feature of a word using Shannon Visualization technique.   
+Indonesian Language Model   
+This program trains Indonesian model using ngram technique   
+The data used are the 9 most popular news sites in Indonesia   
+There is an automatic sentence generator feature from given word using Shannon Visualization technique   
 
 ## Datasets
+I use the python article scraper tool in this [link](https://github.com/codelucas/newspaper).   
+I captured 9 automatic news sites then printed into a .txt file format   
 Please see the ```datasets/ ``` for the datasets
+1. datajpnn.txt
+2. datakompas.txt
+3. datamerdeka.txt
+4. datametrotv.txt
+5. datarepublika.txt
+6. datasuara.txt
+7. datatempo.txt
+8. datatribunn.txt
+9. dataviva.txt
 
 ## Function
 
@@ -30,24 +41,27 @@ git clone https://github.com/faisalsyfl/IndoLangModel.git
 
 ## Getting Started
 ``` php
-/* Your first string */
-var string1;
-/* Your second string */
-var string2;
+/* Your datasets filename */
+$corpus = Array('datatribunn.txt','datakompas.txt','datatempo.txt','datajpnn.txt','datamerdeka.txt');
+$modelUni = array();
+$modelBi = array();
+$modelTri = array();
 
-matrixMED = MED(string1,string2);
-matrixLED = LED(string1,string2)
-console.log(matrixMED);
-console.log(matrixLED);
+foreach($corpus as $i){
+	$modelUni = $this->Tools->unigramCount(file_get_contents(FCPATH.'datasets/'.$i),$modelUni);
+	$modelBi = $this->Tools->bigramCount(file_get_contents(FCPATH.'datasets/'.$i),$modelBi);
+	$modelTri = $this->Tools->trigramCount(file_get_contents(FCPATH.'datasets/'.$i),$modelTri);
+}
 
-seqOperationMED = backTrace(matrixMED);
-seqOperationLED = backTrace(matrixLED);
-console.log(seqOperationMED);
-console.log(seqOperationLED);
+$this->Tools->pre_print_r($modelUni);
+$this->Tools->pre_print_r($modelBi);
+$this->Tools->pre_print_r($modelTri);
 
 ```
-
 ## Documentation
-![alt text](https://s1.postimg.org/2xeoni799b/image.png "Input")  
-![alt text](https://s1.postimg.org/10bktu5mcf/image.png "Matrix & Backtrace")
-![alt text](https://s1.postimg.org/1lxzubdftr/image.png "Matrix & Backtrace")
+![alt text](https://s1.postimg.org/8kbdma77cf/image.png "UI Program")  
+![alt text](https://s1.postimg.org/39aidjzefj/image.png "Bigram Probs Checker")  
+![alt text](https://s1.postimg.org/4jq6y1jten/image.png "Shannon Visualization")  
+
+## Live Demo
+<http://indolangmodel.byethost7.com/>
